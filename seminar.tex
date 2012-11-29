@@ -1,0 +1,339 @@
+\documentclass[11pt, a4paper, ngerman, twoside]{article}
+
+%% Die folgende Anleitung gilt für Linux:
+%%
+%%  Die Übersetzung dieses Dokuments erfolgt mit (ggf. öfter aufrufen):
+%%  pdflatex seminar.tex
+%%
+%%  Falls die Bibliographie geändert wurde, dann zusätzlich:
+%%  bibtex seminar
+%%
+%%  Bitte darauf achten, dass pdflatex und bibtex keine Warnungen und
+%%  keine Fehler melden.
+%%
+%%  Das Ergebnis kann man ansehen:
+%%  acroread seminar.pdf
+%%
+%%  Die Quelldatei einer deutschen Rechtschreibprüfung unterziehen:
+%%  ispell -d deutsch -T latin1 seminar.tex
+
+%%  Zur Unterstuetzung von Umlauten:
+%\usepackage{ngerman}
+%%  Die Kodierung des Dokuments wird angegeben durch:
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb,amsthm,graphicx}
+\usepackage{hyperref} % important: load after float
+\hypersetup{
+	pdfproducer={pdfeTex 3.14159-1.30.6-2.2},
+	colorlinks=false,
+	pdfborder=0 0 0	% keine Box um die Links!
+}
+
+\oddsidemargin0mm
+\evensidemargin0mm
+\textwidth159.2mm
+\topmargin0mm
+\headheight0mm
+\textheight43\baselineskip
+\usepackage{url}
+\urlstyle{rm}
+
+%%  Die Seitennumerierung wird später von uns korrigiert.
+\setcounter{page}{1}
+
+%% Die Konfiguration eigener Header und Footer
+%% ermöglicht beispielsweise das Paket
+\usepackage{fancyhdr}
+%% Die folgenden Zeilen konfigurieren das Paket für unsere Zwecke
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[RO,LE]{\thepage}\renewcommand\headrulewidth{0pt}}
+\fancyhf{}
+\fancyhead[LE]{\myauthor}
+\fancyhead[RO]{\mytitle}
+\fancyfoot[RO,LE]{\thepage}
+%% Hier setzen wir den Stil der Seiten des Dokuments so,
+%% dass das von uns konfigurierte Paket fancyhr verwendet wird.
+\pagestyle{fancy}
+
+%%  Die Theorem-Umgebungen sind in amsthdoc.pdf beschrieben:
+\renewcommand{\proofname}{Beweis}
+\theoremstyle{plain}\newtheorem{Lemma}{Lemma}
+\theoremstyle{plain}\newtheorem{Satz}[Lemma]{Satz}
+\theoremstyle{definition}\newtheorem{Definition}[Lemma]{Definition}
+\theoremstyle{definition}\newtheorem*{Beispiel}{Beispiel}
+\theoremstyle{remark}\newtheorem*{Bemerkung}{Bemerkung}
+
+%% Das Argument zu Date soll leer bleiben, 
+%% damit dem Titel kein Datum hinzugefügt wird.
+\date{}
+
+% % % Ab hier sollte das Dokument bearbeitet werden! % % % 
+%% Eigene \usepackage und \newcommand Befehle sind hier einzufügen.
+%% Vor der Verwendung anderer Pakete muss eine Rücksprache mit dem Betreuer erfolgen.
+% % %
+
+\newcommand{\isdef}{=_{\mathrm{def}}}
+\newcommand{\N}{\mathbb{N}}
+
+\begin{document}
+%%  Die Überschrift der Ausarbeitung ist zwischen {}
+%%  in der nächsten Zeile einzutragen.
+\title{Cognitive Questions in Software Visualization}
+%%  Der Name des Autors oder die Namen der Autoren sind 
+%%zwischen {} in der nächsten Zeile einzutragen.
+\author{Frank Richter, Tamino Hartmann}
+
+%%  Die nächste fünf Zeilen müssen unverändert bleiben!
+\makeatletter
+\let\mytitle\@title
+\let\myauthor\@author
+\makeatother
+\maketitle
+%% ab hier darf das Dokument wieder verändert werden!
+\begin{abstract}
+
+%%  Eine kurze Zusammenfassung der Ausarbeitung ist hier einzufügen.
+%%  Sie sollte 4-12 Zeilen umfassen.
+Das ist eine zu kurze Zusammenfassung.
+Hier wird erläutert was in dieser Arbeit geleistet wird, aber ohne in Details zu gehen.
+Nicht beschrieben wird \textit{wie} es gemacht wird, es sei denn gerade das ist interessant.
+
+\end{abstract}
+
+%%  Der Text der Ausarbeitung ist hier einzufügen.
+%%  Er sollte 8-10 Seiten umfassen.
+%%  Die Gliederung erfolgt mit \section und \subsection Befehlen.
+%%  Referenzen innerhalb des Texts erfolgen mit \label und \ref Befehlen.
+%%  Referenzen auf Literatur erfolgen mit dem \cite Befehl.
+\section{Introduction}
+
+Origin cite like this\cite{origin}.
+
+\subsection{Overview}
+
+good software visualisation isn’t simply a matter of mimicking paper-based tasks
+
+the hope in visualisation is that expertise in presentation can compensate for inexpertness in readership
+
+visualization aims to find simplicity in a complex artefact to produce selective representation of a complex abstraction (code)
+
+unifying aim of software visualisation is to make information apparent
+
+difficulty: represents information artefacts (as opposed to physical ones)
+
+question of suitability
+
+\subsection{Definition of Visualizations}
+
+used to show different sorts of information:
+
+presenting large data sets
+
+demonstrating virtual machine
+
+changing the perspective
+
+display-based reasoning
+
+distinction between visualizations: those that represent
+
+data
+
+code
+
+algorithm
+
+external structure versus cognitive structure
+
+structure versus purpose or expectation
+
+plan structure is how programmers conceptualise programs
+
+at present there is a shortage of software visualizations explicitly built around cognitive representations
+
+no idea how a cognitive representation would look like
+
+define cognitive
+
+\section{Reasons for using Software Visualizations}
+
+space of intentions for software visualizations
+
+what it is used for (experts view):
+
+externalize images of thought
+
+setting aside information
+
+produce focus for knowledge transfer
+
+to provide tools for thinking
+
+harness computer as a collaborator in problem solving
+
+intentions of software visualization for use by non-experts:
+
+to provide glimpse of an expert’s imagery
+
+to provide a visualization of expert’s reasoning process
+
+to provide tool that are consistent with expert behavior
+
+visualization of execution
+
+provide additional information that non-experts find difficult to envision
+
+assumption: non-experts have a less developed or less appropriate internal imagery
+
+visualizations for non-experts often with instructive role
+
+visualizations not useful without insight about their use
+
+\section{Graphical Visualizations and their Aspects}
+
+how to distinguish visualization software from viewing software?
+
+essence of visualization:
+
+alternative representation includes changes to
+
+structure
+
+modality
+
+alternative emphasis include explicit representation of temporal behavior through
+
+instantaneous animation
+
+historical integration
+
+spatial application domains can be better visualized with graphics (but both always possible)
+
+growing evidence that graphical representations can be harder work and produce poorer performance than textual ones 
+
+richness: graphical appear potentially richer than textual
+
+gestalt
+
+mapping to the domain
+
+Accessibility and comprehensibility
+
+fun: allows the programmer more freedom to play around with layout
+
+illusion of accessibility may be more important than the reality
+
+\section{Concepts of Visualizations}
+
+\subsection{Tasks of Visualizations}
+
+descriptions of visualization systems rarely specify any particular task that they are intended to support
+
+cross-referencing strategy is important for experts
+
+two axioms about information representation are:
+
+finding and using information is easier when the form of the information sought has a cognitive fit
+
+presentation highlights some kinds of information, likely obscures other kinds
+
+\subsection{Information Dimensions in Visualizations}
+
+Text is linear one-dimensional
+
+Pictures are two dimensional
+
+Moving pictures are three dimensional
+
+Virtual reality adds a dimension (4d?)
+
+eight variables can be utilised in a printed graphic image
+
+each dimension comes at a cost
+
+limited view 
+
+economical line of research might be to discover how much can be achieved by two
+
+the allocation of the plane should be the most careful decision taken
+
+thinking less about building virtual reality systems and more about what to do with two dimensional display devices
+
+\subsection{Influence of Personal Skill and Variation}
+
+readership skills
+
+visibility doesn’t guarantee effective interpretation
+
+novice readers lack search an inspection strategies and get distracted by surface features
+
+experts are better at recognising what is relevant and disregarding the irrelevant
+
+visibility is in the eye of the beholder
+
+graphical cultures: little of graphical culture is codified and some conventions vary among sub-cultures
+
+presentation skills: guiding the reader by associating perceptual cues
+
+cognitive style
+
+experts have a tendency to create a visualization for a particular problem even if it will never be useful for another problem
+
+software visualization is for coping with unknowns
+
+other person’s visualization used seldom because the SV are made for single problem, and thus not applicable to current software
+
+experts want from SV (comparable to programming languages) control, scale, speed, truth
+
+\subsection{Multiple Representations}
+
+SV usually presents two or more informations
+
+usually one better
+
+use of multiple representations:
+
+used separately
+
+different views on a conceptual space
+
+bridging representations (one to understand the other)
+
+heterogeneous inference (alternation between the two required to comprehend problem)
+
+useful awkwardness (???)
+
+\subsection{Influence of Conventions on Visualizations}
+
+interpretation of visualization is influenced by general knowledge of graphical conventions
+
+conflict between mathematical and metaphorical conventions
+
+SV strongly depends on: (for widespread use)
+
+cultural dependency
+
+conflicting metaphors
+
+commercial interests
+
+unsupported intuitions
+
+\section{Conclusion}
+
+don’t assume too much
+
+can’t highlight everything
+
+do not presume upon your user’s contexts
+
+SV can at present only be designed for one context
+
+spontaneousness of programmers at solving problems ignored at own risk
+
+%%  Der Text der Ausarbeitung ist hier zu Ende.
+%%  Die nächste Zeile bleibt unverändert.
+\bibliographystyle{plain}
+\bibliography{seminar}
+
+\end{document}
