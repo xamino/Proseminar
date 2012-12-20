@@ -92,7 +92,7 @@
 %% ab hier darf das Dokument wieder verändert werden!
 \begin{abstract}
 
-In this paper, we take a look at software visualizations in all their variety. We begin by looking at why programmers use them and what purpose they have. Important for this topic is also the different users that might use them and how different their interpretation of a given representation is. We end on a note towards possible and required future work.
+In this paper, we take a look at software visualizations in all their variety. We begin by looking at why programmers use them and what purpose they have. Important for this topic is also the different users that might use them and how different their interpretation of a given representation is. We also list some of the problems that visualization software has currently and what concepts must be kept in mind when designing them. Some cognitive concepts concerning understanding a given visualization are also looked upon. We end on a note towards possible and required future work.
 
 \end{abstract}
 
@@ -130,7 +130,7 @@ Comparing the two, the original paper states the assumption that novices have a 
 \section{Graphical Visualizations and their Aspects}
 \label{graphical}
 
-It is difficult to clearly distinguish visualizations from other ways of viewing software. An important point when considering this is that in print media, there is no longer a clear separation between graphics and typography; even so most people associate visualization with pictures because humans tend to prefer pictures over a wall of text. But if one thinks of a software as something that consists of many randomly placed and randomly sized buttons with strange icons on them, then a textual description of this where every button is listed and every function is described makes information way more visible than the graphical user interface itself. Therefore the original paper comes to the conclusion that visualizations are in essence an alternative representation or alternative emphasis within a representation. However, it is interesting to note that there is evidence that graphical representations are proving harder to work with when compared to purely textual ones. So when should they still be used? Mainly when a richer representation is required, when accessibility and comprehensibility are important, and when the interaction should be more fun for the people who will utilize it\footnote{This is because creative working is encouraged stronger when a representation is more graphical.}. Especially accessibility can be an important point to consider, as the illusion of accessibility can be more important than general effectiveness to encourage actual use of the representation.
+It is difficult to clearly distinguish visualizations from other ways of viewing software. An important point when considering this is that in print media, there is no longer a clear separation between graphics and typography; even so most people associate visualization with pictures because humans tend to prefer pictures over a wall of text. But if one thinks of a software as something that consists of many randomly placed and randomly sized buttons with strange icons on them, then a textual description of this where every button is listed and every function is described makes information way more visible than the graphical user interface itself. Therefore the original paper comes to the conclusion that visualizations are in essence an alternative representation or alternative emphasis within a representation. However, it is interesting to note that there is evidence that graphical representations are proving harder to work with when compared to purely textual ones. So when should they still be used? Mainly when a richer representation is required, when accessibility and comprehensibility are important, and when the interaction should be more fun for the people who will utilize it. This is because creative working is encouraged stronger when a representation is more graphical. Furthermore, accessibility can be an important point to consider, as the illusion of accessibility can be more important than general effectiveness to encourage actual use of the representation.
 
 \section{Concepts of Visualizations}
 
@@ -156,7 +156,7 @@ Generally speaking there is no absolute guide as to how many dimensions should b
 
 \subsection{Influence of Personal Skill and Variation}
 
-The aim all software visualization is to highlight information; most of the time specifically one information out of a multitude. The goal of this is to allow the user to access and work with information more easily. However, accessing and working with information is strongly connected to how we interpret what we perceive based on what we have learned about interpretation. This can be broken down into a set of skills.
+The aim of all software visualization is to highlight information; most of the time specifically one information out of a multitude. The goal of this is to allow the user to access and work with information more easily. However, accessing and working with information is strongly connected to how we interpret what we perceive based on what we have learned about interpretation. This can be broken down into a set of skills.
 
 First is readership skills. Here, the original paper means how capable the consumer of information is in separating non-relevant information from relevant one. This is closely tied with visibility. It is important to note though that a high visibility does not guarantee effective interpretation. Expert users are capable of correctly sorting out all the relevant information regardless of how visible it is. Interpreting representations is a skill that needs to be trained to be acquired\cite{green}. Generally, one could say that visibility is not only a characteristic of a visualization; visibility also comes from how adept the reader is in picking out relevant information to a task.
 
@@ -166,7 +166,7 @@ Also important are representational skills. When creating visualizations, it is 
 
 Lastly is cognitive style. It describes the level of experience in personal expression, perception, and interpretation skills. Basis of these is the acceptance that among different users as well as individual visualizations one will recive different results.
 
-Apart from the skills of the user, one can also clearly how the level of expertise plays an influential role in visualizations. One can question whether visualizations intended for experts are suitable for novices or the other way around. To start somewhere, the original paper first considers why experts create visualization tools for themselves and the characteristics of these tools.
+Apart from the skills of the user, one can also see clearly how the level of expertise plays an influential role in visualizations. One can question whether visualizations intended for experts are suitable for novices or the other way around. To start somewhere, the original paper first considers why experts create visualization tools for themselves and the characteristics of these tools.
 
 Many of the visualizations made by third parties such as debuggers or execution models only visualize a single paradigm. While this might be useful for novices who lack basic understanding in these areas, experts have no need for these. Experts tend to know the boundaries and problems of paradigms and strive to work beyond them. Most problems that experts face are not problems within a given paradigm but abnormal behavior of entities within the bounds of the paradigm where the error lies outside of it. This leads experts to creating visualizations for just a single problem. Some of the most difficult problems involve multiple different tools and their interaction; therefore, an expert's visualization is created for coping with unknowns, for which of course most of the time no tool exists that satisfies the needs of an expert. These visualizations are deemed worthwhile to create when the net gain is considered significant enough to warrant the effort, such as when taking over someone's program, tackling large problems, or when problems cross domains.
 
@@ -176,7 +176,7 @@ Out of these points, we can summarize the following points as to what experts de
 
 \subsection{Multiple Representations}
 
-Systems that visualize software usually display two or more views of the same information. Contrary to that it is better most of the time to utilize only one representation as that reduces mental strain from continuously switching between them, uses less screen space, avoids having to map the two onto each other, and eliminates the problem of synchronizing between the two.
+Systems that visualize software usually display two or more views of the same information. Contrary to that it is better most of the time to utilize only one representation as that reduces mental strain from continuously switching between them, uses less screen space, avoids having to map both onto each other, and eliminates the problem of synchronizing between the two.
 
 However, sometimes multiple representations are required when one isn't sufficient. If that is the case, the users must learn to work between them, how they fit together, and keep track of them in parallel. This is called inter-representational reasoning. The reasons for using more than one representation are varied.
 
@@ -208,7 +208,7 @@ Concerning their use, it becomes clear that a visualization cannot make an exper
 
 When looking at how experts use visualizations, a general solution to all the conflicts seems even further away, due to the fact that they tend to really specialize their self-created representations. While not really helpful towards finding a general solution, ignoring the fact that certain problems require specialized visualizations is only done at one's own risk, as a large user base is then ignored.
 
-However, not everything points towards a dark future for software visualizations. Not only have already come a long way from simple help functions, serious progress towards a solution is starting to be made. The future for the further development of software visualizations might not be an easy path, but it is one where a lot of work can and is being done.
+However, not everything points towards a dark future for software visualizations. Not only have we already come a long way from simple help functions, serious progress towards a solution is starting to be made. The future for the further development of software visualizations might not be an easy path, but it is one where a lot of work can and is being done.
 
 %%  Der Text der Ausarbeitung ist hier zu Ende.
 %%  Die nächste Zeile bleibt unverändert.
